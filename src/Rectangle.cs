@@ -25,7 +25,7 @@ namespace Microsoft.Xna.Framework
 	/// Describes a 2D-rectangle.
 	/// </summary>
 	[Serializable]
-	[TypeConverter(typeof(RectangleConverter))]
+	//[TypeConverter(typeof(RectangleConverter))]
 	[DebuggerDisplay("{DebugDisplayString,nq}")]
 	public struct Rectangle : IEquatable<Rectangle>
 	{
@@ -443,5 +443,18 @@ namespace Microsoft.Xna.Framework
 		}
 
 		#endregion
+
+		public Point Size
+		{
+			get
+			{
+				return new Point(Width, Height);
+			}
+			set
+			{
+				Width = value.X;
+				Height = value.Y;
+			}
+		}
 	}
 }

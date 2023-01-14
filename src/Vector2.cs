@@ -1177,5 +1177,7 @@ namespace Microsoft.Xna.Framework
 		}
 
 		#endregion
+
+		public Point ToPoint() => new Point((int)X, (int)Y);
 	}
 }
