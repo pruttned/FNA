@@ -25,7 +25,7 @@ namespace Microsoft.Xna.Framework
 	/// Describes a 2D-rectangle.
 	/// </summary>
 	[Serializable]
-	//[TypeConverter(typeof(RectangleConverter))]
+	[TypeConverter(typeof(RectangleConverter))]
 	[DebuggerDisplay("{DebugDisplayString,nq}")]
 	public struct Rectangle : IEquatable<Rectangle>
 	{
